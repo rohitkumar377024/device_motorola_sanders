@@ -237,6 +237,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Perf
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.extension_library=libqti-perfd-client.so \
+    ro.sys.fw.dex2oat_thread_count=8 \
     ro.vendor.at_library=libqti-at.so \
     ro.vendor.gt_library=libqti-gt.so \
     vendor.debug.enable.gamed=0
