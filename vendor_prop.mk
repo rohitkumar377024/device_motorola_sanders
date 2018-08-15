@@ -370,6 +370,13 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpteth=0x2ee7 \
     ro.usb.bpteth_adb=0x2ee8
 
+
+# USB debugging at boot
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.secure=0
+ro.debuggable=1
+
 # Volte
 PRODUCT_PROPERTY_OVERRIDES += \
 persist.vendor.radio.force_on_dc=true \
