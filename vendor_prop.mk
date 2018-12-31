@@ -370,7 +370,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.usb.bpteth=0x2ee7 \
     ro.usb.bpteth_adb=0x2ee8
 
-
 # USB debugging at boot
 persist.sys.usb.config=mtp,adb
 ro.adb.secure=0
@@ -418,3 +417,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.dha_th_rate=2.3 \
     ro.config.sdha_apps_bg_max=64 \
     ro.config.sdha_apps_bg_min=8
+
+#WFD
+PRODUCT_PROPERTY_OVERRIDES += \
+    persist.debug.wfd.enable=1 \
+    vendor.video.disable.ubwc=1
