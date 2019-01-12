@@ -142,6 +142,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
     persist.debug.wfd.enable=1 \
+    wifi.direct.interface=p2p-dev-wlan0 \
     persist.sys.wfd.virtual=0 \
     vendor.video.disable.ubwc=1
 
