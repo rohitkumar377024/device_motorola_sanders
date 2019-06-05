@@ -297,6 +297,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/libnfc-nci.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nci.conf \
     $(LOCAL_PATH)/configs/libnfc-nxp.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-nxp.conf
 
+# OEM Permissions
+PRODUCT_COPY_FILES += \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_2016_exclusive.xml:system/etc/permissions/pixel_2016_exclusive.xml \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_2017_exclusive.xml:system/etc/permissions/pixel_2017_exclusive.xml \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_2018_exclusive.xml:system/etc/permissions/pixel_2018_exclusive.xml \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_2019_midyear_exclusive.xml:system/etc/permissions/pixel_2019_midyear_exclusive.xml \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_experience_2019_midyear.xml:system/etc/permissions/pixel_experience_2019_midyear.xml \
+	$(LOCAL_PATH)/oem-permissions/google/pixel_experience_2018.xml:system/etc/permissions/pixel_experience_2018.xml \
+        $(LOCAL_PATH)/oem-permissions/google/pixel_experience_2017.xml:system/etc/permissions/pixel_experience_2017 \
+	$(LOCAL_PATH)/oem-permissions/google/nexus.xml:system/etc/permissions/nexus.xml \
+	$(LOCAL_PATH)/oem-permissions/google/google_build.xml:system/etc/permissions/google_build.xml \
+	$(LOCAL_PATH)/oem-permissions/google/com.google.android.dialer.support.xml:system/etc/permissions/com.google.android.dialer.support.xml
+
 # OMX
 PRODUCT_PACKAGES += \
     libOmxAacEnc \
