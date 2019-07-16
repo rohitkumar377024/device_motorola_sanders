@@ -22,7 +22,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from potter device
 $(call inherit-product, device/motorola/sanders/device.mk)
 
-# Inherit some common CM stuff.
+# Inherit some common bootleggers stuff.
 $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Boot animation
@@ -35,10 +35,13 @@ PRODUCT_NAME := bootleg_sanders
 PRODUCT_MODEL := Moto G⁵ˢ Plus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
+PRODUCT_RELEASE_NAME := sanders
+BOOTLEGGERS_BUILD_TYPE := Shishufied
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="Moto G⁵ˢ Plus" \
-    PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
+    PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys" \
+    DEVICE_MAINTAINERS := "Melvin"
 
 BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys
 VENDOR_BUILD_FINGERPRINT := google/walleye/walleye:9/PPP3.180510.008/4811556:user/release-keys
