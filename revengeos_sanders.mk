@@ -29,6 +29,7 @@ $(call inherit-product, vendor/revengeos/config/gsm.mk)
 IS_PHONE := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_MINIMAL_GAPPS := true
+REVENGEOS_BUILDTYPE := OFFICIAL
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -44,9 +45,9 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_RELEASE_NAME := sanders
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS=Melvin \
     PRODUCT_NAME="Moto G⁵ˢ Plus" \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
-    DEVICE_MAINTAINERS := "Melvin"
 
 # FINGERPRINT
 BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ3A.190705.003/5600800:user/release-keys
