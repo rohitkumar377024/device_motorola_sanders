@@ -7,7 +7,6 @@
     <original-package android:name="com.cyanogenmod.settings.device" />
 
     <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
-    <uses-permission android:name="android.permission.MODIFY_PHONE_STATE" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
     <uses-permission android:name="android.permission.VIBRATE"/>
     <uses-permission android:name="android.permission.WAKE_LOCK" />
@@ -15,11 +14,14 @@
 
     <protected-broadcast android:name="com.android.systemui.doze.pulse" />
 
+    <uses-sdk
+        android:minSdkVersion="27"
+        android:targetSdkVersion="27" />
+
     <application
         android:allowBackup="true"
         android:label="@string/moto_actions_title"
-        android:icon="@drawable/ic_gesture"
-        android:summary="@string/moto_actions_summary"
+        android:icon="@mipmap/ic_launcher"
         android:persistent="true">
 
         <provider
@@ -37,6 +39,7 @@
         <receiver android:name="com.moto.actions.BootCompletedReceiver">
             <intent-filter>
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.PRE_BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
@@ -70,7 +73,7 @@
         <activity
             android:name=".ActionsPreferenceActivity"
             android:label="@string/moto_actions_title"
-            android:summary="@string/moto_actions_summary"
+            android:summary="@string/device_gestures_summary"
             android:theme="@style/MotoActions">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
@@ -97,22 +100,12 @@
             android:label="@string/fingerprint_gestures_title"
             android:theme="@style/MotoActions">
         </activity>
-        <!-- Display Calibration -->
-        <activity
-            android:name="com.moto.actions.DisplayCalibration"
-            android:label="@string/kcal_title"
-	    android:theme="@style/MotoActions">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
 
-	<activity
+        <activity
             android:name=".ScreenOffGestureSettingsActivity"
             android:label="@string/screen_off_gestures_title"
             android:theme="@style/MotoActions">
         </activity>
-        
         <!-- Dirac Sounds -->
         <activity
             android:name="com.moto.actions.dirac.DiracActivity"

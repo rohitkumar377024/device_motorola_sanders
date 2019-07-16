@@ -17,8 +17,8 @@
 package com.moto.actions.doze;
 
 import android.hardware.Sensor;
-import android.hardware.SensorEvent;
-import android.hardware.SensorEventListener;
+import android.hardware.TriggerEvent;
+import android.hardware.TriggerEventListener;
 import android.util.Log;
 
 import com.moto.actions.MotoActionsSettings;
@@ -48,7 +48,7 @@ public class GlanceSensor implements ScreenStateNotifier {
     public void screenTurnedOn() {
         if (mEnabled) {
             Log.d(TAG, "Disabling");
-            mSensorHelper.unregisterListener(mGlanceListener);
+            mSensorHelper.cancelTriggerSensor(mSensor, mGlanceListener);
             mEnabled = false;
         }
     }
@@ -57,20 +57,17 @@ public class GlanceSensor implements ScreenStateNotifier {
     public void screenTurnedOff() {
         if (mMotoActionsSettings.isPickUpEnabled() && !mEnabled) {
             Log.d(TAG, "Enabling");
-            mSensorHelper.registerListener(mSensor, mGlanceListener);
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
             mEnabled = true;
         }
     }
 
-    private SensorEventListener mGlanceListener = new SensorEventListener() {
+    private TriggerEventListener mGlanceListener = new TriggerEventListener() {
         @Override
-        public void onSensorChanged(SensorEvent event) {
+        public void onTrigger(TriggerEvent event) {
             Log.d(TAG, "triggered");
             mSensorAction.action();
-        }
-
-        @Override
-        public void onAccuracyChanged(Sensor mSensor, int accuracy) {
+            mSensorHelper.requestTriggerSensor(mSensor, mGlanceListener);
         }
     };
 }
