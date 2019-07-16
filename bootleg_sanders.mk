@@ -47,8 +47,8 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS := "Melvin"
 
 # FINGERPRINT
-BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ1A.190105.004/5148680:user/release-keys
-VENDOR_BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ1A.190105.004/5148680:user/release-keys
+BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ3A.190705.003/5600800:user/release-keys
+VENDOR_BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ3A.190705.003/5600800:user/release-keys
 
 # for specific
 $(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
