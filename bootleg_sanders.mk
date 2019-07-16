@@ -35,14 +35,14 @@ TARGET_PICK_BOOTANIMATION="0,1,2,3,4,5,6,7"
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
 PRODUCT_NAME := bootleg_sanders
-PRODUCT_MODEL := Moto G (5S) Plus
+PRODUCT_MODEL := Moto G⁵ˢ Plus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_RELEASE_NAME := sanders
 BOOTLEGGERS_BUILD_TYPE := Shishufied
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME="Moto G (5S) Plus" \
+    PRODUCT_NAME="Moto G⁵ˢ Plus" \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
     DEVICE_MAINTAINERS := "Melvin"
 
