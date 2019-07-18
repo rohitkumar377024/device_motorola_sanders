@@ -28,6 +28,8 @@ $(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_PICK_BOOTANIMATION="1,2,3,4"
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
