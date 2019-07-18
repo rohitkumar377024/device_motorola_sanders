@@ -14,4 +14,4 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-	$(LOCAL_DIR)/potato_sanders.mk
+	$(LOCAL_DIR)/bootleg_sanders.mk
