@@ -41,9 +41,9 @@ PRODUCT_RELEASE_NAME := sanders
 BOOTLEGGERS_BUILD_TYPE := Shishufied
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
+    DEVICE_MAINTAINERS=Melvin \
     PRODUCT_NAME="Moto G⁵ˢ Plus" \
-    PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys" \
-    DEVICE_MAINTAINERS := "Melvin"
+    PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
 
 # FINGERPRINT
 BUILD_FINGERPRINT := google/crosshatch/crosshatch:9/PQ3A.190705.003/5600800:user/release-keys
