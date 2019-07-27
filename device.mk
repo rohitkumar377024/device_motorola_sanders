@@ -60,9 +60,6 @@ PRODUCT_AAPT_PREF_CONFIG := xxhdpi
 PRODUCT_AAPT_CONFIG := normal
 
 # ARCore
-PRODUCT_PACKAGES += \
-    arcore
-
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.config.calibration_cad=/system/etc/calibration_cad.xml
 
@@ -116,7 +113,7 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
-    GoogleCameraMod \
+    Snap2 \
     libgui_vendor \
     camera.device@1.0-impl \
     camera.device@3.2-impl \
