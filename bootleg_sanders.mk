@@ -23,13 +23,8 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from sanders device
 $(call inherit-product, device/motorola/sanders/device.mk)
 
-# Inherit some common Revenge OS stuff.
-$(call inherit-product, vendor/revengeos/config/common.mk)
-$(call inherit-product, vendor/revengeos/config/gsm.mk)
-IS_PHONE := true
-TARGET_GAPPS_ARCH := arm64
-TARGET_MINIMAL_GAPPS := true
-REVENGEOS_BUILDTYPE := OFFICIAL
+# Inherit some common Bootleggers stuff.
+$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
@@ -38,7 +33,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := revengeos_sanders
+PRODUCT_NAME := bootleg_sanders
 PRODUCT_MODEL := Moto G⁵ˢ Plus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
