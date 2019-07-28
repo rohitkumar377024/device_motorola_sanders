@@ -136,8 +136,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
     vendor.display.disable_skip_validate=1
 
 #DRM
-PRODUCT_PROPERTY_OVERRIDES += \
-    drm.service.enabled=true
+#PRODUCT_PROPERTY_OVERRIDES += \
+#    drm.service.enabled=true
 
 # Wifi-Display
 PRODUCT_PROPERTY_OVERRIDES += \
