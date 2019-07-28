@@ -23,26 +23,33 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_n_mr1.mk
 # Inherit from sanders device
 $(call inherit-product, device/motorola/sanders/device.mk)
 
-# Inherit some common Bootleggers stuff.
-$(call inherit-product, vendor/bootleggers/config/common_full_phone.mk)
+# Inherit some common AOSiP stuff.
+$(call inherit-product, vendor/aosip/config/common_full_phone.mk)
 
 # Boot animation
 TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_PICK_BOOTANIMATION="1,2,3,4,5"
+
+# Gapps
+$(call inherit-product-if-exists, vendor/gapps/config.mk)
+TARGET_GAPPS_ARCH := arm64
+IS_PHONE := true
+
+# PixelStyle
+$(call inherit-product-if-exists, vendor/pixelstyle/config.mk)
+
+AOSIP_BUILDTYPE := DerpFest
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
-PRODUCT_NAME := bootleg_sanders
+PRODUCT_NAME := aosip_sanders
 PRODUCT_MODEL := Moto G⁵ˢ Plus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_RELEASE_NAME := sanders
-BOOTLEGGERS_BUILD_TYPE := Shishufied
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    DEVICE_MAINTAINERS=Melvin \
     PRODUCT_NAME="Moto G⁵ˢ Plus" \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
 
