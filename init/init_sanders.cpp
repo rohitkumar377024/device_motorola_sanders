@@ -83,7 +83,7 @@ void vendor_load_properties()
     property_override("ro.product.name", "sanders_retail");
 
     // sku
-    std::string sku = "Moto G5S Plus (";
+    std::string sku = "Moto G (5S) Plus (";
     sku.append(android::base::GetProperty("ro.boot.hardware.sku", ""));
     sku.append(")");
     property_set("ro.product.model", sku.c_str());
