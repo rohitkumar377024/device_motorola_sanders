@@ -110,6 +110,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libbt-vendor
 
+#Assign Fingerprint for Bootimage
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bootimage.build.fingerprint := google/crosshatch/crosshatch:9/PQ3A.190801.002/5670241:user/release-keys
+
 # Camera
 PRODUCT_PACKAGES += \
     libbson \
