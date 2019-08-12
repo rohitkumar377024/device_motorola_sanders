@@ -39,14 +39,14 @@ TARGET_BOOT_ANIMATION_RES := 1080
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := sanders
 PRODUCT_NAME := revengeos_sanders
-PRODUCT_MODEL := Moto G⁵ˢ Plus
+PRODUCT_MODEL := Moto G (5S) Plus
 PRODUCT_BRAND := motorola
 PRODUCT_MANUFACTURER := motorola
 PRODUCT_RELEASE_NAME := sanders
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     DEVICE_MAINTAINERS=Melvin \
-    PRODUCT_NAME="Moto G⁵ˢ Plus" \
+    PRODUCT_NAME=sanders \
     PRIVATE_BUILD_DESC="sanders-user 8.1.0 OPS28.65-36 9fea release-keys"
 
 # FINGERPRINT
